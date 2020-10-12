@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Ascii
+{
+    static void asciiToSentence ( String str,int len)
+    {
+        int num=0;
+        for (int i = 0; i<len; i++) 
+        {
+            num = num*10+(str.charAt(i)-'0'); 
+            if (num >= 32 && num <= 122)
+            {
+                char ch = (char)num; 
+                System. out.print(ch); 
+                num=0;
+            }
+        }
+    }
+    public static void main(String args[])
+    {
+            System.out.println("Enter ascii");
+            Scanner sc=new Scanner(System.in);
+            String str=sc.next();
+            int len = str.length();
+            asciiToSentence (str,len);
+    }
+}
+    
+OUTPUT:
+Enter ascii:
+7269767679
+HELLO
